@@ -1,0 +1,19 @@
+{
+  "name": "edge-room-chat",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx wrangler dev -c frontend/wrangler.jsonc -c backend/wrangler.jsonc",
+    "dry-run:backend": "npx wrangler deploy --dry-run -c backend/wrangler.jsonc",
+    "dry-run:frontend": "npx wrangler deploy --dry-run -c frontend/wrangler.jsonc",
+    "test:integration": "node tests/integration.mjs",
+    "test:browser": "node tests/browser.mjs",
+    "dev:backend": "npx wrangler dev -c backend/wrangler.jsonc --port 8788",
+    "dev:frontend": "npx wrangler dev -c frontend/wrangler.jsonc --port 8787"
+  },
+  "devDependencies": {
+    "wrangler": "4.158.0",
+    "ws": "^8.18.3",
+    "@playwright/test": "^1.56.0"
+  }
+}
